@@ -116,6 +116,11 @@ const Navbar = () => {
             >
               <p className="px-2 py-4 rounded inline-block">Contact</p>
             </NavLink>
+            {token && (
+          <NavLink to="https://doctorappointmentadmin.vercel.app/" target="_blank">
+            <p className="px-2 py-4 rounded inline-block">Admin Panel</p>
+          </NavLink>
+        )}
           </ul>
         </div>
       </div>
