@@ -39,7 +39,7 @@ const Navbar = () => {
           <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
         </NavLink>
         {token && (
-          <NavLink to="http://localhost:5174" target="_blank">
+          <NavLink to="https://doctorappointmentadmin.vercel.app/" target="_blank">
             <li className=" bg-blue-500 text-white px-4 py-2 rounded-md">
               Admin Panel
             </li>
