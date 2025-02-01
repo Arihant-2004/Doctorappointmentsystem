@@ -8,7 +8,8 @@ import axios from 'axios';
 const Myappointment = () => {
   const {backendurl,token,getdoctordata}=useContext(AppContext);
   const [appoint,setappoint]=useState([]);
-  const navigate=useNavigate()
+  const navigate=useNavigate();
+  const phone="9601334913";
    const getuserappoint=async()=>{
     try {
       const {data}=await axios.get(backendurl+'/api/user/myappointment',{headers:{token}});
@@ -29,10 +30,11 @@ const Myappointment = () => {
         description:"Appointment Payment",
         order_id:order.id,
         receipt:order.receipt,
-        handler:async(res)=>{
-            console.log(res)
+        handler:async(response)=>{
+            console.log(response)
+
             try {
-              const {data}=await axios.post(backendurl+'/api/user/payment-verify',res,{headers:{token}});
+              const {data}=await axios.post(backendurl+'/api/user/payment-verify',{response,phone},{headers:{token}});
               if(data.success){
                 getuserappoint()
                 navigate('/Myappointment')
