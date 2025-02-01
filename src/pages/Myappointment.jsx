@@ -9,7 +9,7 @@ const Myappointment = () => {
   const {backendurl,token,getdoctordata}=useContext(AppContext);
   const [appoint,setappoint]=useState([]);
   const navigate=useNavigate();
-  const phone="9601334913";
+  const phone="9664611581";
    const getuserappoint=async()=>{
     try {
       const {data}=await axios.get(backendurl+'/api/user/myappointment',{headers:{token}});
