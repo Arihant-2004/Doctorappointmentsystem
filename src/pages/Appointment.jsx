@@ -171,13 +171,13 @@ const Appointment = () => {
                   onClick={() => setslotindex(index)}
                   className={`text-center py-6 min-w-16 rounded-full cursor-pointer ${
                     slotindex === index
-                      ? " bg-primary text-white "
-                      : "border border-gray-200"
+                      ? " bg-primary text-red-400"
+                      : "border border-blue-500"
                   }`}
                   key={index}
                 >
-                  <p>{item[0] && days[item[0].datetime.getDay()]}</p>
-                  <p> {item[0] && item[0].datetime.getDate()}</p>
+                  <p className="text-blue-800">{item[0] && days[item[0].datetime.getDay()]}</p>
+                  <p className="text-amber-500"> {item[0] && item[0].datetime.getDate()}</p>
                 </div>
               ))}
           </div>
@@ -191,7 +191,7 @@ const Appointment = () => {
                   className={`text-sm cursor-pointer font-light flex-shrink-0 py-2 rounded-full px-5 ${
                     item.time === slottime
                       ? " bg-primary text-white "
-                      : "border border-gray-200 text-gray-400"
+                      : "border border-blue-500 text-red-800"
                   }`}
                 >
                   {console.log(item[0])}
