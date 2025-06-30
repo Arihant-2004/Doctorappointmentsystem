@@ -11,6 +11,9 @@
 ::-webkit-scrollbar{
   @apply hidden
 }
+body {
+  @apply bg-sky-100;
+}
 @media(max-width:780px){
   .active p{
     @apply
